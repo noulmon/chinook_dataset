@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chinook Albums</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Album Title</th>
+        <th>Artist</th>
+    </tr>
+    </thead>
+    {% for album in data %}
+        <tr>
+            <th>{{ album.id }}</th>
+            <td>{{ album.title }}</td>
+            <td>{{ album.artist.name }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
