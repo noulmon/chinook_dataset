@@ -3,23 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Chinook Albums</title>
+    <style>
+        .center {
+            margin: auto;
+            width: 60%;
+            padding: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-<table>
-    <thead>
-    <tr>
-        <th>#</th>
-        <th>Album Title</th>
-        <th>Artist</th>
-    </tr>
-    </thead>
-    {% for album in data %}
+
+<nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Chinook Datasets</a>
+</nav>
+
+<div class="container-fluid center">
+    <h1 style="text-align:left;color:#007bff;">Albums and Artists</h1>
+    <table class="table table-bordered table-striped table-sm" style="width:80%">
+        <thead class="thead-light">
         <tr>
-            <th>{{ album.id }}</th>
-            <td>{{ album.title }}</td>
-            <td>{{ album.artist.name }}</td>
+            <th scope="col"><h4>#</h4></th>
+            <th scope="col"><h4>Album Title</h4></th>
+            <th scope="col"><h4>Artist</h4></th>
         </tr>
-    {% endfor %}
-</table>
+        </thead>
+        {% for album in data %}
+            <tr>
+                <th scope="row">{{ album.id }}</th>
+                <td>{{ album.title }}</td>
+                <td>{{ album.artist.name }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
