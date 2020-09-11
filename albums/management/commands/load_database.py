@@ -17,12 +17,12 @@ class Command(BaseCommand):
                 password = url.password
                 host = url.hostname
             else:
-                host="localhost"
-                database="hasura_datasets"
-                user="postgres"
-                password="root"
+                host = "localhost"
+                database = "hasura_datasets"
+                user = "postgres"
+                password = "root"
             # establishing the database connection
-            
+
             connection = psycopg2.connect(
                 host=host,
                 database=database,
