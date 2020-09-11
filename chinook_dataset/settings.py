@@ -29,7 +29,7 @@ SECRET_KEY = '(w)if386302v281uk&m@(j&e^@mv2@%&vraeffxs@+8-p2!j+('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['chinook-datasets.herokuapp.com']
 
 # Application definition
 
